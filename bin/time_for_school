@@ -8,6 +8,10 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+katie = Student.new
+katie.first_name = "Katie"
+katie.last_name = "Blizzard"
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
@@ -16,5 +20,11 @@ avi.last_name = "Flombaum"
 some_knowledge = avi.teach 
 
 steve.learn(some_knowledge)
+steve.learn(avi.teach)
+katie.learn(avi.teach)
+katie.learn(avi.tech)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+puts steve.knowledge
+puts katie.knowledge
